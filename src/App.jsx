@@ -51,7 +51,7 @@ function App() {
     <ErrorBoundary>
       <AuthProvider>
         <QueryClientProvider client={queryClientInstance}>
-          <Router>
+          <Router basename={import.meta.env.PROD ? '/FinTrack/' : '/'}>
             <AppRoutes />
           </Router>
           <Toaster />
