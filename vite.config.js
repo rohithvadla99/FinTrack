@@ -3,7 +3,7 @@ import { defineConfig } from 'vite'
 import path from 'path'
 
 export default defineConfig({
-  base: 'FinTrack',
+  base: process.env.NODE_ENV === 'production' ? '/FinTrack/' : '/',
   plugins: [react()],
   resolve: {
     alias: {
